@@ -4,25 +4,57 @@ using namespace std;
 // return the sum of all elements in ar
 int sumArray(const int ar[], int size)
 {
+    //arrays are pass by ref by default
+    int sum = 0; 
 
+    for (int i = 0; i < size; i++)
+    {
+        sum += ar[i]; 
+    }
+    return sum;
 }
 
 // multiply all elements in ar and return the product
 long productArray(const int ar[], int size)
 {
+    int product = ar[0]; //cannot be 0 product will be 0
 
+    for (int i = 1; i <= size; i++)
+    {
+        product *= ar[i]; 
+
+    }
+
+    return product; 
 }
 
 // return the maximum element in ar
 int maxArray(const int ar[], int size)
 {
+    //comparison
+    int max = ar[0]; 
 
+    for (int i = 1; i <= size; i++ )
+    {
+        if (ar[i] > max)
+            max = ar[i]; 
+    }
+
+    return max;
 }
 
 // return the minimum element in ar
 int minArray(const int ar[], int size)
 {
+    int min = ar[0]; //default case
 
+    for (int i = 1; i <= size; i++)
+    {
+        if (ar[i] < min)
+            min = ar[i];
+    }
+    
+    return min;
 }
 
 int main()
@@ -31,11 +63,7 @@ int main()
     Q1: declare an integer array and initialize it with the first 10 prime numbers. You can manually initialize the values.
     */
 
-
-
-
-
-
+    int array1[10] = {1,2,3,5,7,11,12,17,19,23};
 
     /*
     Q2. Complete the function definitions and test them using the following function calls.
